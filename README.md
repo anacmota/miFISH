@@ -35,7 +35,7 @@ Find the script for this analysis in **_miFISH experiment > Signal decoding > St
 
 - assign an aleatory dot to a single-color probe or a dual-color probe that corresponds to one of the required channels;
 - in case of a dual-color find the other color dot that is positioned closer to the aleatory dot picked in first place; 
-- in case the pairwise distance is below 0.55 µm, do not assign any dot and start again with another aleatory dot;
+- in case the pairwise distance is higher than 0.55 µm, do not assign any dot and start again with another aleatory dot;
 - measure for every iteration out of 100, the best combination of dots by applying an objective function:
 
   1 - Brightness intensity, *e_brightness* <br>
