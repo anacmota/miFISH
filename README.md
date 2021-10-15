@@ -63,6 +63,15 @@ After choosing one of the previous decoding methods and running the script, extr
 ## Lamina distances and Compartments
 After choosing one of the previous decoding methods and running the script, extract the script for this analysis in **_miFISH experiment > Lamina distances and Compartments_** folder.
 
+Figures:
+- All pairwise distances combination of probes with the corresponding eigenvector combination;
+- Boxplot representation for each eigenvector combination (A-A) (A-B) (B-B);
+- Taking all pairwise distances for the 120 probes combinations, measure the median for each 120 combination and make a boxplot that divides the 120 distances for each eigenvector combination (A-A) (A-B) (B-B) (or no compartment asigned);
+- All pairwise distances combination of probes (120 in total) represented according to the lamina distance differences in between the probes;
+- Representation of the median of lamina distance normalised for each probe and the color code displays the compartment classification;
+- Boxplot for all lamina distances measure for each probe;
+- Representation of the Eigenvector distribution for all chr2, the probes are positioned at their corresponding genomic coordinate and the number indexed is the median lamina distance.
+
 <br>
 
 ## Full Weight Height Maximum
