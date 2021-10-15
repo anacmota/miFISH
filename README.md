@@ -50,17 +50,12 @@ Find the script for this analysis in **_miFISH experiment > Signal decoding > St
 
 <br>
 
-## Pairwise distances
-After choosing one of the previous decoding methods and running the script, extract the script for this analysis in **_miFISH experiment > Pairwise distances_** folder.
-
-<br>
-
 ## miFISH vs HiC
 After choosing one of the previous decoding methods and running the script, extract the script for this analysis in **_miFISH experiment > miFISH vs HiC_** folder.
 
 <br>
 
-## Lamina distances and Compartments
+## Pairwise distances, Lamina distances and Compartments
 After choosing one of the previous decoding methods and running the script, extract the script for this analysis in **_miFISH experiment > Lamina distances and Compartments_** folder.
 
 Figures:
@@ -70,7 +65,8 @@ Figures:
 - All pairwise distances combination of probes (120 in total) represented according to the lamina distance differences in between the probes;
 - Representation of the median of lamina distance normalised for each probe and the color code displays the compartment classification;
 - Boxplot for all lamina distances measure for each probe;
-- Representation of the Eigenvector distribution for all chr2, the probes are positioned at their corresponding genomic coordinate and the number indexed is the median lamina distance.
+- Representation of the Eigenvector distribution for all chr2, the probes are positioned at their corresponding genomic coordinate and the number indexed is the median lamina distance;
+- All 3 and 20 distances grouped and show the behaviour of each 3Mbp and 20 Mbp.
 
 <br>
 
