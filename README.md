@@ -5,6 +5,9 @@ miFISH is an extension of the recently developed iFISH method (Gelali et al, Nat
 
 The dots coordinates for each FISH dot is extracted with DOTTER as with iFISH method. To decode the signals, we present the following pipelines that were described in detail in Mota et al, Scientific Data in revision. We recomment the miFISH pipeline with all filters included because it provides the best correlation with HiC data. 
 
+### Note:
+Extract the codes intended to be run and place them in the same directory as the folder of the datasets. The code will open the folder containing the datasets.
+
 <br>
 
 ### miFISH pipeline with all filters (best correlation with HiC)
