@@ -73,7 +73,7 @@ Figures:
 
 <br>
 
-## Full Weight Height Maximum
+## Full Width at Half Maximum
 Find the script for this analysis in **_miFISH experiment > FWHM_** folder.
 
 <br>
