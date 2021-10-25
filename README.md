@@ -5,13 +5,13 @@ miFISH is an extension of the recently developed iFISH method (Gelali et al, Nat
 
 The dots coordinates for each FISH dot is extracted with DOTTER as with iFISH method. To decode the signals, we present the following pipelines that were described in detail in Mota et al, Scientific Data in revision. We recomment the miFISH pipeline with all filters included because it provides the best correlation with HiC data. 
 
-### Note:
-Extract the codes intended to be run and place them in the same directory as the folder of the datasets. The code will open the folder containing the datasets.
 
 <br>
 
 ### miFISH pipeline with all filters (best correlation with HiC)
 Find the script for this analysis in **_miFISH experiment > Signal decoding > with Filters_**.
+Extract the 2 scripts to a working folder where the **_datasets folder_** should be in the same directory as the working script.
+The script **_main_miFISH_** is ready to be run by the user. To specify the dataset replicate to be run, change the number in line 6 from "1" to "2".
 
 - detect 10 signals for each fluorescent dye (except for Alexa Fluor 790 (ir800) channel is expected 2 dots);
 - compute all pairwise distances in between all the signals for all the channels, to match signals coming from the same dual-color probe;
@@ -25,6 +25,8 @@ Find the script for this analysis in **_miFISH experiment > Signal decoding > wi
 
 ### miFISH pipeline simplified parameters
 Find the script for this analysis in **_miFISH experiment > Signal decoding > without Filters_**.
+Extract the 2 scripts to a working folder where the **_datasets folder_** should be in the same directory as the working script.
+The script **_main_miFISH_** is ready to be run by the user. To specify the dataset replicate to be run, change the number in line 6 from "1" to "2".
 
 - detect 10 signals for each fluorescent dye (except for single-color probes which are immediately assigned the brighest of the channel);
 - compute all pairwise distances in between all the signals for all the channels, to match signals coming from the same dual-color probe;
@@ -35,6 +37,8 @@ The same dots can be allocated to other probes, which is in contrary to the miFI
 
 ### miFISH stochastic allocation of dots
 Find the script for this analysis in **_miFISH experiment > Signal decoding > Stochastic_**.
+Extract the 2 scripts to a working folder where the **_datasets folder_** should be in the same directory as the working script.
+The script **_main_miFISH_** is ready to be run by the user. To specify the dataset replicate to be run, change the number in line 6 from "1" to "2".
 
 - assign an aleatory dot to a single-color probe or a dual-color probe that corresponds to one of the required channels;
 - in case of a dual-color find the other color dot that is positioned closer to the aleatory dot picked in first place; 
@@ -54,12 +58,19 @@ Find the script for this analysis in **_miFISH experiment > Signal decoding > St
 <br>
 
 ## miFISH vs HiC
-After choosing one of the previous decoding methods and running the script, extract the script for this analysis in **_miFISH experiment > miFISH vs HiC_** folder.
+Find the script for this analysis in **_miFISH experiment > miFISH vs HiC_** folder.
+Extract the script to a working folder where the **_datasets folder_** should be in the same directory as the working script.
+Extract and run one of the previous miFISH pipeline with/without all filters or stochastic allocation. The "Coordinates" and "Lamina" variables are re-used by the HiC script.
+Lastly, run the script **_miFISH vs HiC_**.
 
 <br>
 
 ## Pairwise distances, Lamina distances and Compartments
-After choosing one of the previous decoding methods and running the script, extract the script for this analysis in **_miFISH experiment > Lamina distances and Compartments_** folder.
+Extract the script for this analysis in **_miFISH experiment > Lamina distances and Compartments_** folder.
+Additionally, extract the script in **_miFISH experiment > Signal decoding > with Filters_**.
+In line 165 of **_main_miFISH_** remove the "%" in "% laminaDISTeigen(Coordinates, Lamina)".
+Run the analysis with all 3 scripts in the same working directory with the folder **_datasets_**.
+
 
 Figures:
 - All pairwise distances combination of probes with the corresponding eigenvector combination;
@@ -75,6 +86,15 @@ Figures:
 
 ## Full Width at Half Maximum
 Find the script for this analysis in **_miFISH experiment > FWHM_** folder.
+Extract the script to a working folder where the **_datasets folder_** should be in the same directory as the working script.
+The script **_main_no_filter_fwhm_** is ready to be run by the user. To specify the dataset replicate to be run, change the number in line 6 from "1" to "2".
+
+<br>
+
+## Structures curvature
+Find the script for this analysis in **_miFISH experiment > curvature_** folder.
+Extract the 2 scripts to a working folder where the **_datasets folder_** should be in the same directory as the working script.
+The script **_main_curvature_** is ready to be run by the user. To specify the dataset replicate to be run, change the number in line 6 from "1" to "2".
 
 <br>
 
@@ -85,6 +105,8 @@ The co-localization calling for dual-color probes might be challenging because t
 We performed two sets of experiments, in which we used only one dual-color probe alongside two singly labelled probes targeting different loci on chr2. We tested the shift for two different dual-color probes, where one of them can be imaged using the same multi-band dichroic mirror, while the other requires a change of the cube holding dichroic mirrors. The median distance between two signals coming from the same probe labelled with ATTO 542 (tmr) and ATTO 647N (a647)—for which dichroic mirrors are placed in the same cube—was lower than 0.25 µm. In contrast, the median distance between two signals coming from the same probe labelled with Alexa Fluor 488 (a488) and Alexa Fluor 594 (a549)—for which dichroic mirrors are placed in different cubes and hence more mechanical movement is needed to image both—increased to 0.55. Therefore, in further analyses, we retained only signals with pairwise distance lower than 0.55 µm for experiments in which dichroic mirrors were placed in different cubes, while for experiments in which dichroic mirrors shared the same cube, we set the threshold to 0.25 µm.
 
 Find the script for this analysis in **_miFISH colour overlap distance experiment_** folder.
+Extract the script to a working folder where the **_datasets folder_** should be in the same directory as the working script.
+The script **_main_single_probes_** is ready to be run by the user. To specify one of the overlap color tests to be run, change the dyes combination written in line 5 from "AT647N-AT542" to "AF594-AF488".
 
 <br>
 
@@ -92,3 +114,5 @@ Find the script for this analysis in **_miFISH colour overlap distance experimen
 We performed additional iFISH experiments using a set of 60 singly labelled iFISH probes targeting multiple evenly spaced loci along chr1, 2 and 10, which we retrieved from our iFISH probe repository (Gelali et al Nat. Comm. 2019). We then calculated all the pairwise distances either between probes labelled with the same color or between probes labeled with two different colors and examined how the pairwise distances change with increasing genomic distances between the probes.
 
 Find the script for this analysis in **_iFISH chr1 chr2 chr10_** folder.
+Extract the script to a working folder where the **_datasets folder_** should be in the same directory as the working script.
+The script **_main_chr1_2_10_single_colour_** is ready to be run by the user. To specify the chromosome, change the number in line 6 from "2" to "1" or "10". To specify the dataset replicate to be run, change the number in line 10 from "_rep1" to "_rep2" or for chr1 is empty "" (no replicate).
